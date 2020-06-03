@@ -8,20 +8,23 @@ public class cores : MonoBehaviour
     private bool v_valor = false;
     public bool valor = false;
 
+    public static bool entrada = false;
+
+    private CircleCollider2D collider_s;
     private GameObject conector;
     private LineRenderer lr;
-    private Vector3[] linePoints = new Vector3[2];
+    public static Vector3[] linePoints = new Vector3[2];
     private bool isOverMan = false;
 
     public void TrueCheck (bool bule)
     {
         foreach (Transform child in transform)     
         {  
-            if (child.name == "cor")
+            if (child.tag == "cor")
             {
                 child.gameObject.SetActive(bule);
             }
-            else if (child.name == "notCor")
+            else if (child.tag == "notCor")
             {
                 child.gameObject.SetActive(!bule);
             }
@@ -37,12 +40,13 @@ public class cores : MonoBehaviour
     {
         isOverMan = false;
     }
-    
+
     // Start is called before the first frame update
     void Start()
     {
         conector = this.gameObject.transform.GetChild(0).gameObject;
         lr = conector.GetComponent<LineRenderer>();
+        collider_s = conector.GetComponent<CircleCollider2D>();
         linePoints[0] = Vector3.zero;
     }
 
@@ -51,13 +55,29 @@ public class cores : MonoBehaviour
     {
         if (valor != v_valor){TrueCheck(valor);}
 
-        if (Input.GetMouseButton (0) && isOverMan == true) {
-            Camera c = Camera.main;
-            Vector3 p = c.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10));
-            p[0] -= conector.transform.position.x;
-            p[1] -= conector.transform.position.y;
-            linePoints[1] = p;
-            lr.SetPositions (linePoints);
-        }    
+        if (Input.GetMouseButton (0)) {
+            if(isOverMan == true)
+            {
+                Camera c = Camera.main;
+                Vector3 p = c.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10));
+                p[0] -= conector.transform.position.x;
+                p[1] -= conector.transform.position.y;
+                if(entrada == false)
+                {
+                    linePoints[1] = p;
+                }
+                lr.SetPositions (linePoints);
+                collider_s.offset = new Vector2(p[0], p[1]);
+            }
+        }
+        if (Input.GetMouseButtonUp (0)) 
+        {
+            if(entrada == true && isOverMan == true)
+            {
+                Debug.Log(linePoints[1]);
+                lr.SetPositions (linePoints);
+            }
+        }
+
     }
 }
