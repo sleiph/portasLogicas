@@ -4,26 +4,29 @@ using UnityEngine;
 
 public class linhaColisao : MonoBehaviour
 {
-    private bool entrada = false;
+    public bool valorConectorEntrada = false;
+    private bool isOverAlguem = false;
     private bool isOverConector = false;
     private bool isMousedownConector = false;
     private Vector3[] linhaEntrada = new Vector3[2];
+    private Vector3[] coliderCoords = new Vector3[2];
 
     private LineRenderer lr;
-    private CircleCollider2D pontaEntrada;
+    /// private CircleCollider2D colisor;
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "entrada")
-        {
-            entrada = true;
+        if (col.gameObject.tag == "entrada" || col.gameObject.tag == "saida"){
+            isOverAlguem = true;
+            coliderCoords[0] = new Vector3 (col.transform.position.x, col.transform.position.y,0);
+        }
+        if (col.gameObject.tag == "saida"){
+            valorConectorEntrada = col.gameObject.GetComponent<plugSaida>().valor;
         }
     }
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.tag == "entrada")
-        {
-            entrada = false;
-        }
+        isOverAlguem = false;
+        valorConectorEntrada = false;
     }
     void OnMouseEnter()
     {
@@ -36,17 +39,18 @@ public class linhaColisao : MonoBehaviour
     void OnMouseDown()
     {
         isMousedownConector = true;
+        /// colisor.radius = .1f;
     }
     void OnMouseUp()
     {
         isMousedownConector = false;
-        linhaEntrada[1] = lr.GetPosition(1);
-        lr.SetPosition (1, linhaEntrada[1]);
+        /// colisor.radius = .33f;
+        transform.position = new Vector3(transform.position.x, transform.position.y, -3);
     }
     void Awake()
     {
         lr = gameObject.GetComponentInParent<LineRenderer>();
-        pontaEntrada = transform.GetComponent<CircleCollider2D>();
+        /// colisor = GetComponent<CircleCollider2D>();
     }
     // Start is called before the first frame update
     void Start()
@@ -58,14 +62,17 @@ public class linhaColisao : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButton (0) && isMousedownConector) {
-            Camera c = Camera.main;
-            Vector3 p = c.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10));
-            /// p[0] -= transform.position.x;
-            /// p[1] -= transform.position.y;
-            linhaEntrada[0] = p;
-            lr.SetPosition (0, linhaEntrada[0]);
-            /// pontaEntrada.offset = new Vector2(p[0], p[1]);
-            this.transform.position = new Vector3 (p[0], p[1], p[2]-2);
+            if (!plugEntrada.isOverEntrada && !plugSaida.isOverMan){
+                Camera c = Camera.main;
+                Vector3 p = c.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10));
+                linhaEntrada[0] = p;
+                lr.SetPosition (0, linhaEntrada[0]);
+                this.transform.position = new Vector3 (linhaEntrada[0][0], linhaEntrada[0][1], linhaEntrada[0][2]);
+            }
+            else{
+                lr.SetPosition (0, coliderCoords[0]);
+                this.transform.position = new Vector3 (coliderCoords[0][0], coliderCoords[0][1], coliderCoords[0][2]);
+            }
         }
     }
 }
