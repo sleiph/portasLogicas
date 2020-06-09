@@ -8,8 +8,10 @@ public class linhaColisao : MonoBehaviour
     private bool isOverAlguem = false;
     private bool isOverConector = false;
     private bool isMousedownConector = false;
-    private Vector3[] linhaCoords = new Vector3[2];
-    private Vector3[] coliderCoords = new Vector3[2];
+    public float gridTamanho = 0.25f;
+
+    Vector3 screenPoint;
+    Vector3 offset;
 
     private LineRenderer lr;
     public linhaColisao irmao;
@@ -18,9 +20,8 @@ public class linhaColisao : MonoBehaviour
     {
         if (col.gameObject.tag == "entrada" || col.gameObject.tag == "saida"){
             isOverAlguem = true;
-            coliderCoords[0] = new Vector3 (col.transform.position.x, col.transform.position.y,0);
+            conexao = col.gameObject;
         }
-        conexao = col.gameObject;
     }
     private void OnTriggerExit2D(Collider2D col)
     {
@@ -30,6 +31,7 @@ public class linhaColisao : MonoBehaviour
             irmao.valorConector = false;
         }
         isOverAlguem = false;
+        conexao = transform.parent.GetChild(0).gameObject;
     }
     void OnMouseEnter()
     {
@@ -42,6 +44,9 @@ public class linhaColisao : MonoBehaviour
     void OnMouseDown()
     {
         isMousedownConector = true;
+        Vector3 scanPos = gameObject.transform.position;
+        screenPoint = Camera.main.WorldToScreenPoint(scanPos);
+        offset = scanPos - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
         if (isOverAlguem){
             if (conexao.tag == "entrada"){
                 conexao.GetComponent<plugSaida>().valor = false;
@@ -61,8 +66,8 @@ public class linhaColisao : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y, -3);
         if (isOverAlguem){
             if (conexao.tag == "entrada"){
+                valorConector = irmao.valorConector;
                 AssignValor(valorConector);
-                Debug.Log("entradaMouseup " + valorConector);
             }
             else if (conexao.tag == "saida"){
                 valorConector = conexao.GetComponent<plugSaida>().valor;
@@ -73,6 +78,26 @@ public class linhaColisao : MonoBehaviour
             }
         }
     }
+    void OnMouseDrag() {
+        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
+        Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
+        curPosition.x = (float)(Mathf.Round(curPosition.x / gridTamanho) * gridTamanho);
+        curPosition.y = (float)(Mathf.Round(curPosition.y / gridTamanho) * gridTamanho);
+        Vector3 meioPosition = new Vector3(curPosition.x - ((curPosition.x-irmao.transform.position.x)/2), curPosition.y, curPosition.z);
+        meioPosition.x = (float)(Mathf.Round(meioPosition.x / gridTamanho) * gridTamanho);
+        if (transform.gameObject.tag == "comeco"){
+            lr.SetPosition (0, curPosition);
+            lr.SetPosition (1, meioPosition);
+            lr.SetPosition (2, new Vector3(meioPosition.x, irmao.transform.position.y, meioPosition.z));
+        }
+        else if (transform.gameObject.tag == "final"){
+            lr.SetPosition (1, new Vector3(meioPosition.x, irmao.transform.position.y, meioPosition.z));
+            lr.SetPosition (2, meioPosition);
+            lr.SetPosition (3, curPosition);
+        }
+        this.transform.position = curPosition;
+        /// Physics2D.OverlapCircle(new Vector2(curPosition.x, curPosition.y), 0.1f);
+    }
 
     public void AssignValor(bool valor)
     {
@@ -82,45 +107,23 @@ public class linhaColisao : MonoBehaviour
     void Awake()
     {
         lr = gameObject.GetComponentInParent<LineRenderer>();
+        conexao = transform.parent.GetChild(0).gameObject;
         if (transform.gameObject.tag == "comeco"){
-            irmao = transform.parent.gameObject.transform.GetChild(1).gameObject.GetComponent<linhaColisao>();
+            irmao = transform.parent.gameObject.transform.GetChild(2).gameObject.GetComponent<linhaColisao>();
         }
         else{
-            irmao = transform.parent.gameObject.transform.GetChild(0).gameObject.GetComponent<linhaColisao>();
+            irmao = transform.parent.gameObject.transform.GetChild(1).gameObject.GetComponent<linhaColisao>();
         }
     }
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton (0) && isMousedownConector) {
-            if (!plugSaida.isOverMan){
-                Camera c = Camera.main;
-                Vector3 p = c.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10));
-                linhaCoords[0] = p;
-                if (transform.gameObject.tag == "comeco"){
-                    lr.SetPosition (0, linhaCoords[0]);
-                }
-                else{
-                    lr.SetPosition (1, linhaCoords[0]);
-                }
-                this.transform.position = new Vector3 (linhaCoords[0][0], linhaCoords[0][1], linhaCoords[0][2]);
-            }
-            else{
-                if (transform.gameObject.tag == "comeco"){
-                    lr.SetPosition (0, coliderCoords[0]);
-                }
-                else{
-                    lr.SetPosition (1, coliderCoords[0]);
-                }
-                this.transform.position = new Vector3 (coliderCoords[0][0], coliderCoords[0][1], coliderCoords[0][2]);
-            }
-        }
-        /// if (valorConector != irmao.valorConector) valorConector = valorConector | irmao.valorConector;
+        
     }
 }
