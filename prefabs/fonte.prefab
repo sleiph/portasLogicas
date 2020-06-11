@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1388695426120182581}
   - component: {fileID: 1432708149443302052}
   - component: {fileID: 1782653858020508124}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: saida1
   m_TagString: saida
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914540238102567309}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.25, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0.25, z: -1}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 4617092759235727520}
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5622437418583642888}
   - component: {fileID: 4673508982248630410}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: contato1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940109929819450242}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23311, y: 0.25, z: 1}
+  m_LocalPosition: {x: 0.23311, y: 0.25, z: 0}
   m_LocalScale: {x: 6.625605, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 4617092759235727520}
@@ -211,7 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2901986824590647085}
   - component: {fileID: 4785230727770923452}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: contato2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2666096292055995907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.36, y: 0, z: 1}
+  m_LocalPosition: {x: 0.36, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 4617092759235727520}
@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 3369191630566375385}
   - component: {fileID: 5131456510514003462}
   - component: {fileID: 6698012472292650647}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: saida2
   m_TagString: saida
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4105084249373022990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0, z: -1}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 4617092759235727520}
@@ -412,7 +412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4617092758006553584}
   - component: {fileID: 4617092758006553583}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: contorno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,7 +492,7 @@ GameObject:
   - component: {fileID: 4617092758841378139}
   - component: {fileID: 4617092758841378137}
   - component: {fileID: 4617092758841378138}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: texto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +507,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4617092758841378140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4617092759235727520}
@@ -582,7 +582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4617092759179644491}
   - component: {fileID: 4617092759179644490}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cor
   m_TagString: cor
   m_Icon: {fileID: 0}
@@ -660,7 +660,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4617092759235727520}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fonte
   m_TagString: fonte
   m_Icon: {fileID: 0}
@@ -702,7 +702,7 @@ GameObject:
   - component: {fileID: 8383898669683153744}
   - component: {fileID: 4246710345382529092}
   - component: {fileID: 5498058427273419456}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: saida3
   m_TagString: saida
   m_Icon: {fileID: 0}
@@ -717,7 +717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4998055359718430157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -0.25, z: 0}
+  m_LocalPosition: {x: 0.5, y: -0.25, z: -1}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 4617092759235727520}
@@ -822,7 +822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8867406486201099822}
   - component: {fileID: 8253591885965923723}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: contato3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -837,7 +837,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8369936118151488215}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23310995, y: -0.25, z: 1}
+  m_LocalPosition: {x: 0.23310995, y: -0.25, z: 0}
   m_LocalScale: {x: 6.62561, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 4617092759235727520}

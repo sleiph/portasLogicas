@@ -11,11 +11,13 @@ public class linhaColisao : MonoBehaviour
     public float gridTamanho = 0.25f;
 
     Vector3 screenPoint;
+    Vector3 upPoints;
     Vector3 offset;
 
     private LineRenderer lr;
     public linhaColisao irmao;
     public GameObject conexao;
+    private GameObject pai;
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "entrada" || col.gameObject.tag == "saida"){
@@ -43,6 +45,7 @@ public class linhaColisao : MonoBehaviour
     }
     void OnMouseDown()
     {
+        upPoints = transform.position;
         isMousedownConector = true;
         Vector3 scanPos = gameObject.transform.position;
         screenPoint = Camera.main.WorldToScreenPoint(scanPos);
@@ -63,8 +66,10 @@ public class linhaColisao : MonoBehaviour
     void OnMouseUp()
     {
         isMousedownConector = false;
-        transform.position = new Vector3(transform.position.x, transform.position.y, -3);
+        upPoints = new Vector3(transform.position.x, transform.position.y, -.5f);
+        transform.position = upPoints;
         if (isOverAlguem){
+            transform.parent = conexao.transform.parent;
             if (conexao.tag == "entrada"){
                 valorConector = irmao.valorConector;
                 AssignValor(valorConector);
@@ -77,24 +82,15 @@ public class linhaColisao : MonoBehaviour
                 }
             }
         }
+        else{
+            transform.parent = pai.transform;
+        }
     }
     void OnMouseDrag() {
-        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
+        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.5f);
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
         curPosition.x = (float)(Mathf.Round(curPosition.x / gridTamanho) * gridTamanho);
         curPosition.y = (float)(Mathf.Round(curPosition.y / gridTamanho) * gridTamanho);
-        Vector3 meioPosition = new Vector3(curPosition.x - ((curPosition.x-irmao.transform.position.x)/2), curPosition.y, curPosition.z);
-        meioPosition.x = (float)(Mathf.Round(meioPosition.x / gridTamanho) * gridTamanho);
-        if (transform.gameObject.tag == "comeco"){
-            lr.SetPosition (0, curPosition);
-            lr.SetPosition (1, meioPosition);
-            lr.SetPosition (2, new Vector3(meioPosition.x, irmao.transform.position.y, meioPosition.z));
-        }
-        else if (transform.gameObject.tag == "final"){
-            lr.SetPosition (1, new Vector3(meioPosition.x, irmao.transform.position.y, meioPosition.z));
-            lr.SetPosition (2, meioPosition);
-            lr.SetPosition (3, curPosition);
-        }
         this.transform.position = curPosition;
         /// Physics2D.OverlapCircle(new Vector2(curPosition.x, curPosition.y), 0.1f);
     }
@@ -106,6 +102,7 @@ public class linhaColisao : MonoBehaviour
 
     void Awake()
     {
+        pai = transform.parent.gameObject;
         lr = gameObject.GetComponentInParent<LineRenderer>();
         conexao = transform.parent.GetChild(0).gameObject;
         if (transform.gameObject.tag == "comeco"){
@@ -124,6 +121,21 @@ public class linhaColisao : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (upPoints != transform.position){
+            Vector3 meioPosition = new Vector3(transform.position.x - ((transform.position.x-irmao.transform.position.x)/2), transform.position.y, 0);
+            meioPosition.x = (float)(Mathf.Round((meioPosition.x-pai.transform.position.x) / gridTamanho) * gridTamanho);
+            meioPosition.y = meioPosition.y-pai.transform.position.y;
+            if (transform.gameObject.tag == "comeco"){
+                lr.SetPosition (0, new Vector3(transform.position.x-pai.transform.position.x,transform.position.y-pai.transform.position.y, 0));
+                lr.SetPosition (1, meioPosition);
+                lr.SetPosition (2, new Vector3(meioPosition.x, irmao.transform.position.y-pai.transform.position.y, 0));
+            }
+            else if (transform.gameObject.tag == "final"){
+                lr.SetPosition (1, new Vector3(meioPosition.x, irmao.transform.position.y-pai.transform.position.y, 0));
+                lr.SetPosition (2, meioPosition);
+                lr.SetPosition (3, new Vector3(transform.position.x-pai.transform.position.x,transform.position.y-pai.transform.position.y, 0));
+            }
+            upPoints = new Vector3(transform.position.x, transform.position.y, -.5f);
+        }
     }
 }

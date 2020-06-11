@@ -7,6 +7,8 @@ public class plugSaida : MonoBehaviour
 {
     private bool v_valor = false;
     public bool valor = false;
+    private bool v_entradaD = false;
+    private bool v_entradaQ = false;
     public static bool isOverMan = false;
 
     SpriteRenderer thisCor;
@@ -55,8 +57,14 @@ public class plugSaida : MonoBehaviour
                     if (child.tag == "notCor") child.gameObject.SetActive(!bule);
                 }
             }
-            if (child.name == "plugEntrada2") entrada2 = child.gameObject.GetComponent<plugSaida>();
-            else if (child.name == "plugEntrada4") entrada4 = child.gameObject.GetComponent<plugSaida>();
+            if (child.name == "plugEntrada2"){
+                entrada2 = child.gameObject.GetComponent<plugSaida>();
+                v_entradaD = entrada2.valor;
+            }
+            else if (child.name == "plugEntrada4"){
+                entrada4 = child.gameObject.GetComponent<plugSaida>();
+                v_entradaQ = entrada4.valor;
+            }
             v_valor = bule;
         }
     }
@@ -76,25 +84,27 @@ public class plugSaida : MonoBehaviour
     {
         if (transform.gameObject.tag == "saida"){
             if (valor != v_valor) TrueCheck(valor);
-        }
-        if (transform.gameObject.tag == "saida" && transform.parent.gameObject.tag != "fonte"){
-            if (transform.parent.gameObject.tag == "AND"){
-                valor = entrada2.valor & entrada4.valor;
-            }
-            else if (transform.parent.gameObject.tag == "OR"){
-                valor = entrada2.valor | entrada4.valor;
-            }
-            else if (transform.parent.gameObject.tag == "NAND"){
-                valor = !(entrada2.valor & entrada4.valor);
-            }
-            else if (transform.parent.gameObject.tag == "NOR"){
-                valor = !(entrada2.valor | entrada4.valor);
-            }
-            else if (transform.parent.gameObject.tag == "XOR"){
-                valor = entrada2.valor != entrada4.valor;
-            }
-            else if (transform.parent.gameObject.tag == "XNOR"){
-                valor = !(entrada2.valor != entrada4.valor);
+            if (transform.parent.gameObject.tag != "fonte"){
+                if (v_entradaD != entrada2.valor || v_entradaQ != entrada4.valor){
+                    if (transform.parent.gameObject.tag == "AND"){
+                        valor = entrada2.valor & entrada4.valor;
+                    }
+                    else if (transform.parent.gameObject.tag == "OR"){
+                        valor = entrada2.valor | entrada4.valor;
+                    }
+                    else if (transform.parent.gameObject.tag == "NAND"){
+                        valor = !(entrada2.valor & entrada4.valor);
+                    }
+                    else if (transform.parent.gameObject.tag == "NOR"){
+                        valor = !(entrada2.valor | entrada4.valor);
+                    }
+                    else if (transform.parent.gameObject.tag == "XOR"){
+                        valor = entrada2.valor != entrada4.valor;
+                    }
+                    else if (transform.parent.gameObject.tag == "XNOR"){
+                        valor = !(entrada2.valor != entrada4.valor);
+                    }
+                }
             }
         }
     }
