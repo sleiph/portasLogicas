@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class moverComponente : MonoBehaviour
 {
-    private bool isMousedownMover = false;
     private bool isAreadetrabalho = false;
     private bool isOverOutro = false;
+    private bool isOverConector = false;
     private bool isClonado = false;
     public float gridTamanho = 0.25f;
 
@@ -31,6 +31,7 @@ public class moverComponente : MonoBehaviour
                 isAreadetrabalho = true;
             }
         }
+        /// if (col.gameObject.tag == "comeco" || col.gameObject.tag == "final"){}
     }
     private void OnTriggerExit2D(Collider2D col)
     {
@@ -44,9 +45,8 @@ public class moverComponente : MonoBehaviour
                 isAreadetrabalho = false;
             }
         }
-        if (col.gameObject.layer == LayerMask.NameToLayer("componentes")){
-            isOverOutro = false;
-        }
+        isOverOutro = false;
+        isOverConector = false;
     }
     void OnMouseDown()
     {
@@ -54,11 +54,11 @@ public class moverComponente : MonoBehaviour
         Vector3 scanPos = gameObject.transform.position;
         screenPoint = Camera.main.WorldToScreenPoint(scanPos);
         offset = scanPos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        isOverConector = false;
     }
     void OnMouseUp()
     {
-        isMousedownMover = false;
-        if (isAreadetrabalho && !isOverOutro){
+        if (isAreadetrabalho && !isOverOutro && !isOverConector){
             if (!isClonado){
                 GameObject minhaInstancia = Instantiate(meuPrefab, new Vector3(curPosition.x, curPosition.y, 1), Quaternion.identity);
                 minhaInstancia.transform.SetParent(areaDeTrabalho);
@@ -87,19 +87,20 @@ public class moverComponente : MonoBehaviour
         pai.transform.position = curPosition;
         AreaCheck();
         if (isAreadetrabalho){
+            Collider2D[] hitColliders;
             if (pai.transform.tag == "conector"){
-                Collider2D[] hitColliders = Physics2D.OverlapBoxAll(new Vector2(transform.position.x, transform.position.y), new Vector2(1.25f, .25f), 0);
-                foreach (Collider2D Colover in hitColliders){
-                    if (Colover.transform.name == "mover" && Colover.transform != this.transform){
-                        isOverOutro = true;
-                    }
-                }
+                hitColliders = Physics2D.OverlapBoxAll(new Vector2(transform.position.x, transform.position.y), new Vector2(1f, .1f), 0);
             }
             else{
-                Collider2D[] hitColliders = Physics2D.OverlapBoxAll(new Vector2(transform.position.x, transform.position.y), new Vector2(2, 1), 0);
-                foreach (Collider2D Colover in hitColliders){
-                    if (Colover.transform.name == "mover" && Colover.transform != this.transform){
-                        isOverOutro = true;
+                hitColliders = Physics2D.OverlapBoxAll(new Vector2(transform.position.x, transform.position.y), new Vector2(2, 1), 0);
+            }
+            foreach (Collider2D Colover in hitColliders){
+                if (Colover.transform.name == "mover" && Colover.transform != this.transform){
+                    isOverOutro = true;
+                }
+                if (Colover.gameObject.tag == "comeco" || Colover.gameObject.tag == "final"){
+                    if (Colover.transform.parent != this.transform.parent){
+                        isOverConector = true;
                     }
                 }
             }
@@ -111,7 +112,7 @@ public class moverComponente : MonoBehaviour
         foreach (Transform child in transform.parent)     
         {
             if (child.gameObject.tag == "contorno") {
-                if (isAreadetrabalho && !isOverOutro){
+                if (isAreadetrabalho && !isOverOutro && !isOverConector){
                     child.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
                 }
                 else{

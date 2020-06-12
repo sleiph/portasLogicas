@@ -5,9 +5,7 @@ using UnityEngine;
 public class linhaColisao : MonoBehaviour
 {
     public bool valorConector = false;
-    private bool isOverAlguem = false;
-    private bool isOverConector = false;
-    private bool isMousedownConector = false;
+    public bool isOverAlguem = false;
     public float gridTamanho = 0.25f;
 
     Vector3 screenPoint;
@@ -33,52 +31,54 @@ public class linhaColisao : MonoBehaviour
             irmao.valorConector = false;
         }
         isOverAlguem = false;
-        conexao = transform.parent.GetChild(0).gameObject;
+        if (col.gameObject.tag == "entrada" || col.gameObject.tag == "saida"){
+            conexao = pai.transform.GetChild(0).gameObject;
+        }
     }
     void OnMouseEnter()
     {
-        isOverConector = true;
+
     }
     void OnMouseExit()
     {
-        isOverConector = false;
+
     }
     void OnMouseDown()
     {
         upPoints = transform.position;
-        isMousedownConector = true;
         Vector3 scanPos = gameObject.transform.position;
         screenPoint = Camera.main.WorldToScreenPoint(scanPos);
         offset = scanPos - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
         if (isOverAlguem){
             if (conexao.tag == "entrada"){
                 conexao.GetComponent<plugSaida>().valor = false;
+                conexao.GetComponent<plugSaida>().isConectado = true;
             }
             else if (conexao.tag == "saida"){
                 valorConector = false;
                 irmao.valorConector = false;
                 if (irmao.isOverAlguem && irmao.conexao.tag == "entrada"){
-                    irmao.AssignValor(valorConector);
+                    irmao.conexao.GetComponent<plugSaida>().valor = valorConector;
                 }
             }
         }
     }
     void OnMouseUp()
     {
-        isMousedownConector = false;
         upPoints = new Vector3(transform.position.x, transform.position.y, -.5f);
         transform.position = upPoints;
         if (isOverAlguem){
             transform.parent = conexao.transform.parent;
             if (conexao.tag == "entrada"){
                 valorConector = irmao.valorConector;
-                AssignValor(valorConector);
+                conexao.GetComponent<plugSaida>().valor = valorConector;
+                conexao.GetComponent<plugSaida>().isConectado = true;
             }
             else if (conexao.tag == "saida"){
                 valorConector = conexao.GetComponent<plugSaida>().valor;
                 irmao.valorConector = conexao.GetComponent<plugSaida>().valor;
                 if (irmao.isOverAlguem && irmao.conexao.tag == "entrada"){
-                    irmao.AssignValor(valorConector);
+                    irmao.conexao.GetComponent<plugSaida>().valor = valorConector;
                 }
             }
         }
@@ -93,11 +93,6 @@ public class linhaColisao : MonoBehaviour
         curPosition.y = (float)(Mathf.Round(curPosition.y / gridTamanho) * gridTamanho);
         this.transform.position = curPosition;
         /// Physics2D.OverlapCircle(new Vector2(curPosition.x, curPosition.y), 0.1f);
-    }
-
-    public void AssignValor(bool valor)
-    {
-        conexao.GetComponent<plugSaida>().valor = valorConector;
     }
 
     void Awake()

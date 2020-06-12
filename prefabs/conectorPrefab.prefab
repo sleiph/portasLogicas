@@ -465,5 +465,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 0
-  entrada2: {fileID: 0}
-  entrada4: {fileID: 0}
+  linha: {fileID: 0}
+  entradas: []
