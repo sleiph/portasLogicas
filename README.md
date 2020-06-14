@@ -11,7 +11,7 @@ Os sprites são brancos pra poder escolher a cor dentro do Unity.
 ---
 Algumas mudanças que eu quero fazer são:
 - Perpétuos:
-	- diminuir a quantidade de códigos na função update (melhorar performance).
+	- diminuir a quantidade de código na função update (melhorar performance).
 	- acessibilidade.
 	-intuitividade.
 - Já deviam ter sido feitas, mas por algum motivo não foram:
@@ -28,6 +28,7 @@ Algumas mudanças que eu quero fazer são:
 	- *hovertext* na interface.
 	- mudar o prefab da porta na área de trabalho.
 	- mudar a tela de intro.
+	- aba de ferramentas ser retráctil.
 	- separar o script de componentes em entradas e saídas?
 	- sons?
 - Médios:
