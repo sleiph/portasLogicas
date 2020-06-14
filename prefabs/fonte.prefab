@@ -120,7 +120,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 1
+  isConectado: 0
+  formulaSaida: 
+  linha: []
   entradas: []
+  cores: []
+  nCores: []
 --- !u!1 &940109929819450242
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +138,7 @@ GameObject:
   - component: {fileID: 4673508982248630410}
   m_Layer: 10
   m_Name: contato1
-  m_TagString: Untagged
+  m_TagString: contorno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,7 +217,7 @@ GameObject:
   - component: {fileID: 4785230727770923452}
   m_Layer: 10
   m_Name: contato3
-  m_TagString: Untagged
+  m_TagString: contorno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -291,7 +296,7 @@ GameObject:
   - component: {fileID: 2100701778452029570}
   m_Layer: 10
   m_Name: contato2
-  m_TagString: Untagged
+  m_TagString: contorno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -478,7 +483,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 1
+  isConectado: 0
+  formulaSaida: 
+  linha: []
   entradas: []
+  cores: []
+  nCores: []
 --- !u!1 &4105084249373022990
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +609,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 1
+  isConectado: 0
+  formulaSaida: 
+  linha: []
   entradas: []
+  cores: []
+  nCores: []
 --- !u!1 &4617092758006553585
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,7 +627,7 @@ GameObject:
   - component: {fileID: 4617092758006553583}
   m_Layer: 10
   m_Name: contorno
-  m_TagString: Untagged
+  m_TagString: contorno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -694,7 +709,7 @@ GameObject:
   - component: {fileID: 1572829790995410497}
   m_Layer: 10
   m_Name: texto
-  m_TagString: Untagged
+  m_TagString: texto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -800,6 +815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9151cee800c3045ba231301fdeba58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saidas: []
 --- !u!1 &4617092759179644492
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,7 +841,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4617092759179644492}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 4617092759235727520}
@@ -1042,7 +1058,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 1
+  isConectado: 0
+  formulaSaida: 
+  linha: []
   entradas: []
+  cores: []
+  nCores: []
 --- !u!1 &5232560367685838209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,7 +1076,7 @@ GameObject:
   - component: {fileID: 3503328634666575595}
   m_Layer: 10
   m_Name: contato4
-  m_TagString: Untagged
+  m_TagString: contorno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1242,7 +1263,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 1
+  isConectado: 0
+  formulaSaida: 
+  linha: []
   entradas: []
+  cores: []
+  nCores: []
 --- !u!1 &8369936118151488215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +1281,7 @@ GameObject:
   - component: {fileID: 8253591885965923723}
   m_Layer: 10
   m_Name: contato5
-  m_TagString: Untagged
+  m_TagString: contorno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

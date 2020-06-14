@@ -5,8 +5,10 @@ using UnityEngine;
 public class linhaColisao : MonoBehaviour
 {
     public bool valorConector = false;
-    public bool isOverAlguem = false;
+
     public float gridTamanho = 0.25f;
+
+    public string formulaLinha = "";
 
     Vector3 screenPoint;
     Vector3 upPoints;
@@ -19,7 +21,6 @@ public class linhaColisao : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "entrada" || col.gameObject.tag == "saida"){
-            isOverAlguem = true;
             conexao = col.gameObject;
         }
     }
@@ -29,37 +30,32 @@ public class linhaColisao : MonoBehaviour
         {
             valorConector = false;
             irmao.valorConector = false;
+            formulaLinha = "";
+            irmao.formulaLinha = "";
         }
-        isOverAlguem = false;
         if (col.gameObject.tag == "entrada" || col.gameObject.tag == "saida"){
             conexao = pai.transform.GetChild(0).gameObject;
         }
     }
-    void OnMouseEnter()
-    {
 
-    }
-    void OnMouseExit()
-    {
-
-    }
     void OnMouseDown()
     {
         upPoints = transform.position;
         Vector3 scanPos = gameObject.transform.position;
         screenPoint = Camera.main.WorldToScreenPoint(scanPos);
         offset = scanPos - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
-        if (isOverAlguem){
-            if (conexao.tag == "entrada"){
-                conexao.GetComponent<plugSaida>().valor = false;
-                conexao.GetComponent<plugSaida>().isConectado = true;
-            }
-            else if (conexao.tag == "saida"){
-                valorConector = false;
-                irmao.valorConector = false;
-                if (irmao.isOverAlguem && irmao.conexao.tag == "entrada"){
-                    irmao.conexao.GetComponent<plugSaida>().valor = valorConector;
-                }
+        if (conexao.tag == "entrada"){
+            conexao.GetComponent<plugSaida>().valor = false;
+            conexao.GetComponent<plugSaida>().formulaSaida = "";
+        }
+        else if (conexao.tag == "saida"){
+            valorConector = false;
+            formulaLinha = "";
+            irmao.valorConector = false;
+            irmao.formulaLinha = "";
+            if (irmao.conexao.tag == "entrada"){
+                irmao.conexao.GetComponent<plugSaida>().valor = valorConector;
+                irmao.conexao.GetComponent<plugSaida>().formulaSaida = formulaLinha;
             }
         }
     }
@@ -67,19 +63,29 @@ public class linhaColisao : MonoBehaviour
     {
         upPoints = new Vector3(transform.position.x, transform.position.y, -.5f);
         transform.position = upPoints;
-        if (isOverAlguem){
-            transform.parent = conexao.transform.parent;
-            if (conexao.tag == "entrada"){
+        if (conexao.tag == "entrada"){
+            if (conexao.GetComponent<plugSaida>().linha.Count == 2){
+                transform.parent = conexao.transform.parent;
                 valorConector = irmao.valorConector;
+                formulaLinha = irmao.formulaLinha;
                 conexao.GetComponent<plugSaida>().valor = valorConector;
-                conexao.GetComponent<plugSaida>().isConectado = true;
+                conexao.GetComponent<plugSaida>().formulaSaida = formulaLinha;
             }
-            else if (conexao.tag == "saida"){
-                valorConector = conexao.GetComponent<plugSaida>().valor;
-                irmao.valorConector = conexao.GetComponent<plugSaida>().valor;
-                if (irmao.isOverAlguem && irmao.conexao.tag == "entrada"){
-                    irmao.conexao.GetComponent<plugSaida>().valor = valorConector;
-                }
+            else{
+                upPoints = new Vector3(transform.position.x-.25f, transform.position.y-.25f, -.5f);
+                this.transform.position = upPoints;
+                upPoints = new Vector3(transform.position.x+.25f, transform.position.y+.25f, -.5f);
+            }
+        }
+        else if (conexao.tag == "saida"){
+            transform.parent = conexao.transform.parent;
+            valorConector = conexao.GetComponent<plugSaida>().valor;
+            formulaLinha = conexao.GetComponent<plugSaida>().formulaSaida;
+            irmao.valorConector = conexao.GetComponent<plugSaida>().valor;
+            irmao.formulaLinha = conexao.GetComponent<plugSaida>().formulaSaida;
+            if (irmao.conexao.tag == "entrada"){
+                irmao.conexao.GetComponent<plugSaida>().valor = valorConector;
+                irmao.conexao.GetComponent<plugSaida>().formulaSaida = formulaLinha;
             }
         }
         else{
@@ -92,7 +98,6 @@ public class linhaColisao : MonoBehaviour
         curPosition.x = (float)(Mathf.Round(curPosition.x / gridTamanho) * gridTamanho);
         curPosition.y = (float)(Mathf.Round(curPosition.y / gridTamanho) * gridTamanho);
         this.transform.position = curPosition;
-        /// Physics2D.OverlapCircle(new Vector2(curPosition.x, curPosition.y), 0.1f);
     }
 
     void Awake()
@@ -107,13 +112,12 @@ public class linhaColisao : MonoBehaviour
             irmao = transform.parent.gameObject.transform.GetChild(1).gameObject.GetComponent<linhaColisao>();
         }
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (upPoints != transform.position){
@@ -131,6 +135,34 @@ public class linhaColisao : MonoBehaviour
                 lr.SetPosition (3, new Vector3(transform.position.x-pai.transform.position.x,transform.position.y-pai.transform.position.y, 0));
             }
             upPoints = new Vector3(transform.position.x, transform.position.y, -.5f);
+        }
+        if (conexao.tag == "entrada"){
+            if (conexao.GetComponent<plugSaida>().linha.Count == 2){
+                if (conexao.GetComponent<plugSaida>().valor != valorConector){
+                    valorConector = irmao.valorConector;
+                    conexao.GetComponent<plugSaida>().valor = valorConector;
+                }
+                if (conexao.GetComponent<plugSaida>().formulaSaida != formulaLinha){
+                    formulaLinha = irmao.formulaLinha;
+                    conexao.GetComponent<plugSaida>().formulaSaida = formulaLinha;
+                }
+            }
+        }
+        else if (conexao.tag == "saida"){
+            if (valorConector != conexao.GetComponent<plugSaida>().valor){
+                valorConector = conexao.GetComponent<plugSaida>().valor;
+                irmao.valorConector = conexao.GetComponent<plugSaida>().valor;
+                if (irmao.conexao.tag == "entrada"){
+                    irmao.conexao.GetComponent<plugSaida>().valor = valorConector;
+                }
+            }
+            if (formulaLinha != conexao.GetComponent<plugSaida>().formulaSaida){
+                formulaLinha = conexao.GetComponent<plugSaida>().formulaSaida;
+                irmao.formulaLinha = conexao.GetComponent<plugSaida>().formulaSaida;
+                if (irmao.conexao.tag == "entrada"){
+                    irmao.conexao.GetComponent<plugSaida>().formulaSaida = formulaLinha;
+                }
+            }
         }
     }
 }

@@ -142,7 +142,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valorConector: 0
+  isOverAlguem: 0
   gridTamanho: 0.25
+  formula: 
   irmao: {fileID: 0}
   conexao: {fileID: 0}
 --- !u!1 &3402726623449378426
@@ -287,7 +289,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valorConector: 0
+  isOverAlguem: 0
   gridTamanho: 0.25
+  formula: 
   irmao: {fileID: 0}
   conexao: {fileID: 0}
 --- !u!1 &5332522579099475377
@@ -465,5 +469,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 0
-  linha: {fileID: 0}
+  isConectado: 0
+  formulaSaida: 
+  linha:
+  - {fileID: 0}
   entradas: []
+  cores: []
+  nCores: []

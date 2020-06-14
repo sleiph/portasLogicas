@@ -11,7 +11,6 @@ public class fonteValor : MonoBehaviour
         foreach (plugSaida crianca in saidas) crianca.valor = !crianca.valor;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         foreach (Transform crianca in transform.parent)     
@@ -22,7 +21,6 @@ public class fonteValor : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         
