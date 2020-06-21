@@ -1,5 +1,5 @@
 # portasLogicas
-Programa de simulação de portas lógicas, com fórmulas booleanas e valor de fontes variável. Feito em C#, no unity. `¯\_(ツ)_/¯`
+Programa de simulação de portas lógicas, com fórmulas booleanas e valor de fontes variável. Feito em C#, no Unity. `¯\_(ツ)_/¯`
 
 ![portasLogicas](/img/capa.png)
 
@@ -13,7 +13,8 @@ Algumas mudanças que eu quero fazer são:
 - Perpétuos:
 	- diminuir a quantidade de código na função update (melhorar performance).
 	- acessibilidade.
-	-intuitividade.
+	- intuitividade.
+	- Diminuir tamanho do programa.
 - Já deviam ter sido feitas, mas por algum motivo não foram:
 	- botão pra resetar/limpar a área de trabalho.
 	- botão pra excluir portas e conectores.
@@ -31,7 +32,7 @@ Algumas mudanças que eu quero fazer são:
 	- aba de ferramentas ser retráctil.
 	- separar o script de componentes em entradas e saídas?
 	- sons?
-- Médios:
+- Médias:
 	- conectores mais intuitivos.
 	- tabela de valores
 	- botão no menu pra mostrar a tabela de valores.
@@ -47,4 +48,4 @@ Algumas mudanças que eu quero fazer são:
 
 ---
 ![academia de letras](/img/letras.jpg)
-Todos os arquivos desse projeto (com exceção da fonte tipográfica utilizada) são de minha autoria e portanto podem ser livremente copiados ou editados por qualquer um, para qualquer fim.
+Todos os arquivos desse projeto (com exceção da fonte tipográfica utilizada) são de minha autoria e portanto podem ser livremente copiados ou editados por qualquer um, pra qualquer fim.
