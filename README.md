@@ -3,9 +3,9 @@ Programa de simulação de portas lógicas, com fórmulas booleanas e valor de f
 
 ![portasLogicas](/img/capa.png)
 
-Pra usar a última versão do programa, baixe o arquivo `.zip`, extraia em uma pasta e, rode o `.exe` (não separe o .exe do resto do conteúdo da pasta, a pasta toda é o programa).
+Pra usar a última versão do programa, baixe o arquivo `portasLogicas-64-PC.zip`, extraia em uma pasta e, rode o `.exe` (não separe o .exe do resto do conteúdo da pasta, a pasta toda é o programa).
 
-Pra poder editar o programa, você precisa criar um projeto novo no Unity e salvar o conteúdo do repositório (menos o `README.md` e o `portasLogicas.zip`)dentro da pasta `Assets`.
+Pra poder editar o programa, você precisa criar um projeto novo no Unity e salvar o conteúdo do repositório (menos o `README.md` e o `portasLogicas-64-PC.zip`)dentro da pasta `Assets`.
 Os sprites são brancos pra poder escolher a cor dentro do Unity.
 
 ---
@@ -32,6 +32,7 @@ Algumas mudanças que eu quero fazer são:
 	- aba de ferramentas ser retráctil.
 	- separar o script de componentes em entradas e saídas?
 	- sons?
+	- trocar os colliders de check de validade de posicionamento por checks mais simples de x e y
 - Médias:
 	- conectores mais intuitivos.
 	- tabela de valores
@@ -48,4 +49,5 @@ Algumas mudanças que eu quero fazer são:
 
 ---
 ![academia de letras](/img/letras.jpg)
+
 Todos os arquivos desse projeto (com exceção da fonte tipográfica utilizada) são de minha autoria e portanto podem ser livremente copiados ou editados por qualquer um, pra qualquer fim.
