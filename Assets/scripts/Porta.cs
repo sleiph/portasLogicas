@@ -1,16 +1,13 @@
-public class Porta
+using UnityEngine;
+
+public class Porta : MonoBehaviour
 {
+    Plug[] entradas { get; set; }
 
-    Porta[] pais { get; set; }
-
-    Porta filho { get; set; }
+    Plug saida { get; set; }
 
     bool valor { get; set; }
 
     string tipo { get; set; }
-
-    Porta (string tipo) {
-        this.tipo = tipo;
-    }
     
 }

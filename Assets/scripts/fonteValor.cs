@@ -13,7 +13,7 @@ public class fonteValor : MonoBehaviour
 
     void Start()
     {
-        foreach (Transform crianca in transform.parent)     
+        foreach (Transform crianca in transform.parent)
         {
             if (crianca.tag == "saida"){
                 saidas.Add(crianca.gameObject.GetComponent<plugSaida>());

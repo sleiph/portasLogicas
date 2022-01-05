@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6141983940132259151}
   - component: {fileID: 1388695426120182581}
   - component: {fileID: 1432708149443302052}
-  - component: {fileID: 1782653858020508124}
+  - component: {fileID: 2187495377786901801}
   m_Layer: 10
   m_Name: saida1
   m_TagString: saida
@@ -70,9 +70,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -110,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &1782653858020508124
+--- !u!114 &2187495377786901801
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,15 +119,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 914540238102567309}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7497e4f8c609ed04fa06bcbadb37a8d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 18acc25ca7c37b444820b89fa9703146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 1
-  formulaSaida: 
-  linha: []
-  entradas: []
-  cores: []
-  nCores: []
 --- !u!1 &940109929819450242
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,9 +190,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300002, guid: 236896469f645c54e9604c6dad4c499d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -278,9 +272,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300002, guid: 236896469f645c54e9604c6dad4c499d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -360,9 +354,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300002, guid: 236896469f645c54e9604c6dad4c499d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -385,7 +379,7 @@ GameObject:
   - component: {fileID: 7226394185581317378}
   - component: {fileID: 237831060360050780}
   - component: {fileID: 8344629462717639406}
-  - component: {fileID: 4590205733369897529}
+  - component: {fileID: 7842125926631774450}
   m_Layer: 10
   m_Name: saida2
   m_TagString: saida
@@ -444,9 +438,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -484,7 +478,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &4590205733369897529
+--- !u!114 &7842125926631774450
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -493,15 +487,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3104628479770214459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7497e4f8c609ed04fa06bcbadb37a8d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 18acc25ca7c37b444820b89fa9703146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 1
-  formulaSaida: 
-  linha: []
-  entradas: []
-  cores: []
-  nCores: []
 --- !u!1 &4105084249373022990
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +501,7 @@ GameObject:
   - component: {fileID: 2944756856388290789}
   - component: {fileID: 3369191630566375385}
   - component: {fileID: 5131456510514003462}
-  - component: {fileID: 6698012472292650647}
+  - component: {fileID: 471962447475715138}
   m_Layer: 10
   m_Name: saida3
   m_TagString: saida
@@ -572,9 +560,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -612,7 +600,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &6698012472292650647
+--- !u!114 &471962447475715138
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -621,15 +609,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4105084249373022990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7497e4f8c609ed04fa06bcbadb37a8d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 18acc25ca7c37b444820b89fa9703146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 1
-  formulaSaida: 
-  linha: []
-  entradas: []
-  cores: []
-  nCores: []
 --- !u!1 &4617092758006553585
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,9 +680,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 448fcf5a1669eb74aac30be229cda4c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -906,9 +888,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 0.8235294, g: 0.23529412, b: 0.19607843, a: 1}
   m_FlipX: 0
@@ -929,6 +911,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4617092759235727520}
+  - component: {fileID: 701383755538194757}
   m_Layer: 10
   m_Name: fonte
   m_TagString: fonte
@@ -963,6 +946,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &701383755538194757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4617092759235727521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6796f25ff3263e445b668feaaa43805e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saidas: []
 --- !u!1 &4998055359718430157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,9 +1029,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1159,9 +1155,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300002, guid: 236896469f645c54e9604c6dad4c499d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1243,9 +1239,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1369,9 +1365,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300002, guid: 236896469f645c54e9604c6dad4c499d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

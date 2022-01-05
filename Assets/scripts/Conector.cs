@@ -1,13 +1,8 @@
-public class Conector
+using UnityEngine;
+
+public class Conector : MonoBehaviour
 {
-
-    Porta cabeca { get; set; }
-    Porta bunda { get; set; }
+    Plug cabeca { get; set; }
+    Plug bunda { get; set; }
     bool valor { get; set; }
-    string tipo { get; set; }
-
-    Conector(string tipo) {
-        this.tipo = tipo;
-    }
-
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6068543310419465947}
   - component: {fileID: 6068543310419465946}
   - component: {fileID: 5788487095589930638}
-  - component: {fileID: 8918774683431231474}
+  - component: {fileID: 5280311175185990073}
   m_Layer: 0
   m_Name: plugEntrada4
   m_TagString: entrada
@@ -70,9 +70,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -110,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
---- !u!114 &8918774683431231474
+--- !u!114 &5280311175185990073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,15 +119,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6068543310419465956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7497e4f8c609ed04fa06bcbadb37a8d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 18acc25ca7c37b444820b89fa9703146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 0
-  formulaSaida: 
-  linha: []
-  entradas: []
-  cores: []
-  nCores: []
 --- !u!1 &6068543310473022326
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,9 +190,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300002, guid: 236896469f645c54e9604c6dad4c499d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -278,9 +272,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: fe8234158e0de43448f7d031d3df659e, type: 3}
   m_Color: {r: 0.8235294, g: 0.23529412, b: 0.19607843, a: 1}
   m_FlipX: 0
@@ -303,7 +297,7 @@ GameObject:
   - component: {fileID: 6068543310882349285}
   - component: {fileID: 6068543310882349284}
   - component: {fileID: 6937666771196247732}
-  - component: {fileID: 5888054357503015825}
+  - component: {fileID: 9149382820701550878}
   m_Layer: 0
   m_Name: plugEntrada3
   m_TagString: entrada
@@ -362,9 +356,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -402,7 +396,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
---- !u!114 &5888054357503015825
+--- !u!114 &9149382820701550878
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -411,15 +405,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6068543310882349286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7497e4f8c609ed04fa06bcbadb37a8d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 18acc25ca7c37b444820b89fa9703146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 0
-  formulaSaida: 
-  linha: []
-  entradas: []
-  cores: []
-  nCores: []
 --- !u!1 &6068543310895043079
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,9 +476,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300002, guid: 236896469f645c54e9604c6dad4c499d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -513,7 +501,7 @@ GameObject:
   - component: {fileID: 6068543310938670992}
   - component: {fileID: 6068543310938670999}
   - component: {fileID: 7219284983319247635}
-  - component: {fileID: 3614273939546214160}
+  - component: {fileID: 3837454502776230685}
   m_Layer: 0
   m_Name: plugSaida2
   m_TagString: saida
@@ -572,9 +560,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -612,7 +600,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
---- !u!114 &3614273939546214160
+--- !u!114 &3837454502776230685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -621,15 +609,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6068543310938670993}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7497e4f8c609ed04fa06bcbadb37a8d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 18acc25ca7c37b444820b89fa9703146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 0
-  formulaSaida: 
-  linha: []
-  entradas: []
-  cores: []
-  nCores: []
 --- !u!1 &6068543311166559441
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +623,7 @@ GameObject:
   - component: {fileID: 6068543311166559440}
   - component: {fileID: 6068543311166559447}
   - component: {fileID: 95790183117727078}
-  - component: {fileID: 400812594253508687}
+  - component: {fileID: 4366060750881201007}
   m_Layer: 0
   m_Name: plugSaida3
   m_TagString: saida
@@ -700,9 +682,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -740,7 +722,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
---- !u!114 &400812594253508687
+--- !u!114 &4366060750881201007
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -749,15 +731,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6068543311166559441}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7497e4f8c609ed04fa06bcbadb37a8d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 18acc25ca7c37b444820b89fa9703146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 0
-  formulaSaida: 
-  linha: []
-  entradas: []
-  cores: []
-  nCores: []
 --- !u!1 &6068543311205893383
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,9 +802,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300002, guid: 236896469f645c54e9604c6dad4c499d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -908,8 +884,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 0.8235294, g: 0.23529412, b: 0.19607843, a: 1}
@@ -933,7 +909,7 @@ GameObject:
   - component: {fileID: 6068543311272131188}
   - component: {fileID: 6068543311272131179}
   - component: {fileID: 226051180318690223}
-  - component: {fileID: 324909129148576755}
+  - component: {fileID: 6959045271910222613}
   m_Layer: 0
   m_Name: plugEntrada2
   m_TagString: entrada
@@ -992,9 +968,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1032,7 +1008,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
---- !u!114 &324909129148576755
+--- !u!114 &6959045271910222613
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1041,15 +1017,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6068543311272131189}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7497e4f8c609ed04fa06bcbadb37a8d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 18acc25ca7c37b444820b89fa9703146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 0
-  formulaSaida: 
-  linha: []
-  entradas: []
-  cores: []
-  nCores: []
 --- !u!1 &6068543311298925860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,9 +1088,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: a2393dc80f7994d478d7fb51bcebbf03, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1200,8 +1170,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 0.8235294, g: 0.23529412, b: 0.19607843, a: 1}
@@ -1282,8 +1252,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 92aaf0a6a63775944a76fa370d89b650, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1364,9 +1334,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300002, guid: 236896469f645c54e9604c6dad4c499d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1446,9 +1416,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300002, guid: 236896469f645c54e9604c6dad4c499d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1469,6 +1439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6068543311995672387}
+  - component: {fileID: 898300034748044192}
   m_Layer: 8
   m_Name: portaAND
   m_TagString: AND
@@ -1516,6 +1487,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &898300034748044192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6068543311995672396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b488875140381be41804ae6c5076e12d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6068543312038196441
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,7 +1510,7 @@ GameObject:
   - component: {fileID: 6068543312038196440}
   - component: {fileID: 6068543312038196447}
   - component: {fileID: 7192473475971761428}
-  - component: {fileID: 4676994814098671999}
+  - component: {fileID: 4280050384030166153}
   m_Layer: 0
   m_Name: plugEntrada5
   m_TagString: entrada
@@ -1586,9 +1569,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1626,7 +1609,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
---- !u!114 &4676994814098671999
+--- !u!114 &4280050384030166153
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1635,15 +1618,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6068543312038196441}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7497e4f8c609ed04fa06bcbadb37a8d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 18acc25ca7c37b444820b89fa9703146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 0
-  formulaSaida: 
-  linha: []
-  entradas: []
-  cores: []
-  nCores: []
 --- !u!1 &6068543312054802474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,8 +1689,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 0.8235294, g: 0.23529412, b: 0.19607843, a: 1}
@@ -1794,8 +1771,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 92aaf0a6a63775944a76fa370d89b650, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1876,8 +1853,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 92aaf0a6a63775944a76fa370d89b650, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1958,9 +1935,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300002, guid: 236896469f645c54e9604c6dad4c499d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1983,7 +1960,7 @@ GameObject:
   - component: {fileID: 6068543312276634927}
   - component: {fileID: 6068543312276634926}
   - component: {fileID: 3815531845447834412}
-  - component: {fileID: 8291477097116600779}
+  - component: {fileID: 7362654460755978541}
   m_Layer: 0
   m_Name: plugEntrada1
   m_TagString: entrada
@@ -2042,9 +2019,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2082,7 +2059,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
---- !u!114 &8291477097116600779
+--- !u!114 &7362654460755978541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2091,15 +2068,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6068543312276634920}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7497e4f8c609ed04fa06bcbadb37a8d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 18acc25ca7c37b444820b89fa9703146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 0
-  formulaSaida: 
-  linha: []
-  entradas: []
-  cores: []
-  nCores: []
 --- !u!1 &6068543312322562450
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,9 +2139,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300002, guid: 236896469f645c54e9604c6dad4c499d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2250,9 +2221,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300002, guid: 236896469f645c54e9604c6dad4c499d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2275,7 +2246,7 @@ GameObject:
   - component: {fileID: 6068543312513152087}
   - component: {fileID: 6068543312513152086}
   - component: {fileID: 4739052915525400075}
-  - component: {fileID: 6471174297212067042}
+  - component: {fileID: 8353002914903359670}
   m_Layer: 0
   m_Name: plugSaida1
   m_TagString: saida
@@ -2334,9 +2305,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1974219699
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5e439066e6b4f9e469a68bd240d5b6f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2374,7 +2345,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
---- !u!114 &6471174297212067042
+--- !u!114 &8353002914903359670
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2383,15 +2354,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6068543312513152080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7497e4f8c609ed04fa06bcbadb37a8d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 18acc25ca7c37b444820b89fa9703146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 0
-  formulaSaida: 
-  linha: []
-  entradas: []
-  cores: []
-  nCores: []
 --- !u!1 &7694719502702777076
 GameObject:
   m_ObjectHideFlags: 0

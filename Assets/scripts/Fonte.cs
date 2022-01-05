@@ -1,9 +1,21 @@
-public class Fonte
+using UnityEngine;
+
+public class Fonte : MonoBehaviour
 {
     bool valor { get; set; }
+    [SerializeField] Plug[] saidas;
+
+    void mudarValor() {
+        valor = !valor;
+
+        foreach (Plug saida in saidas) {
+            saida.setValor(valor);
+        }
+    }
     
-    Fonte (bool valor) {
-        this.valor = valor;
+    void OnMouseDown()
+    {
+        mudarValor();
     }
     
 }
