@@ -2,15 +2,11 @@ using UnityEngine;
 
 public class Fonte : MonoBehaviour
 {
-    bool valor { get; set; }
+    bool valor;
     [SerializeField] Plug[] saidas;
 
     void mudarValor() {
         valor = !valor;
-
-        foreach (Plug saida in saidas) {
-            saida.setValor(valor);
-        }
     }
     
     void OnMouseDown()
@@ -18,4 +14,10 @@ public class Fonte : MonoBehaviour
         mudarValor();
     }
     
+    public bool getValor() {
+        return valor;
+    }
+    public void setValor(bool valor) {
+        this.valor = valor;
+    }
 }

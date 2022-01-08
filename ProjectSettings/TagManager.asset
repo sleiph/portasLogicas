@@ -30,12 +30,12 @@ TagManager:
   - UI
   - 
   - 
-  - componentes
   - conectores
+  - componentes
   - fontes
   - 
   - 
-  - 
+  - fundo
   - 
   - 
   - 
@@ -57,4 +57,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: fundo
+    uniqueID: 625860039
+    locked: 0
+  - name: trabalho
+    uniqueID: 1974219699
+    locked: 0
+  - name: ferramentas
+    uniqueID: 270326761
     locked: 0
